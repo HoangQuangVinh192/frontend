@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NXB</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- header -->
+		<div class="header">
+			<div class="banner-top">
+				<div class="menu-top">
+					<ul>
+						<li><a href="#">Liên hệ</a></li>
+						<li><a href="#">Sơ đồ website</a></li>
+						<li><a href="#">Email</a></li>
+						<li><a href="#">Đăng nhập</a></li>
+					</ul>
+					<div class="flag"><img src="images/flag1.jpg"><img src="images/flag2.jpg"></div>
+				</div>
+				<div class="search">
+					<div class="search-body">
+						<input type="text" placeholder="Tìm kiếm..." id="search-txt">
+						<input type="button" id="search-btn">
+					</div>
+					<a href="#">Tìm kiếm nâng cao</a>
+				</div>
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- menu -->
+		<div class="menu">
+			<nav>
+				<ul>
+					<li><a href="#">TRANG CHỦ</a></li>
+					<li><a href="#">GIỚI THIỆU</a>
+						<ul class="sub-menu">
+							<li><a href="#">Lịch sử phát triển</a></li>
+							<li><a href="#">Chức năng - Nhiệm vụ</a></li>
+							<li><a href="#">Cơ cấu tổ chức</a></li>
+						</ul>
+					</li>
+					<li><a href="#">TIN TỨC, SỰ KIỆN</a></li>
+					<li><a href="#">SÁCH MỚI</a></li>
+					<li><a href="#">DIỄN ĐÀN</a></li>
+					<li><a href="#">LIÊN HỆ</a></li>
+				</ul>
+			</nav>
+			<div class="sub-menu-bg"></div>
+		</div>
+		<!-- /menu -->
+		<!-- slide -->
+		<div class="slide">
+			<div class="prev" ></div>
+			<div class="next"></div>
+			<div class="slide-img">
+				<a href="#"><img src="images/9.jpg" id="img1"></a>
+				<a href="#"><img src="images/10.jpg" id="img2"></a>
+				<a href="#"><img src="images/11.jpg" id="img3"></a>
+				<a href="#"><img src="images/12.jpg" id="img4"></a>
+				<a href="#"><img src="images/13.jpg" id="img5"></a>
+				<a href="#"><img src="images/14.jpg" id="img6"></a>
+				<a href="#"><img src="images/15.jpg" id="img7"></a>
+				<a href="#"><img src="images/16.jpg" id="img8"></a>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var slide = new Array();
+				slide[0]="images/1.jpg";
+				slide[1]="images/2.jpg";
+				slide[2]="images/3.jpg";
+				slide[3]="images/4.jpg";
+				slide[4]="images/5.jpg";
+				slide[5]="images/6.jpg";
+				slide[6]="images/7.jpg";
+				slide[7]="images/8.jpg";
+				slide[8]="images/9.jpg";
+				slide[9]="images/10.jpg";
+				slide[10]="images/11.jpg";
+				slide[11]="images/12.jpg";
+				slide[12]="images/13.jpg";
+				slide[13]="images/14.jpg";
+				slide[14]="images/15.jpg";
+				slide[15]="images/16.jpg";
+				slide[16]="images/17.jpg";
+				slide[17]="images/18.jpg";
+				slide[18]="images/19.jpg";
+				slide[19]="images/20.jpg";
+				slide[20]="images/21.jpg";
+				slide[21]="images/22.jpg";
+				slide[22]="images/23.jpg";
+				slide[23]="images/24.jpg";
+				var key =2;
+
+				$(".next").click(function(){
+					$("#img1").fadeOut(function(){
+						$("#img1").attr("src",slide[8*key-8]);
+						$("#img1").fadeIn();
+					});
+					$("#img2").fadeOut(function(){
+						$("#img2").attr("src",slide[8*key-7]);
+						$("#img2").fadeIn();
+					});
+					$("#img3").fadeOut(function(){
+						$("#img3").attr("src",slide[8*key-6]);
+						$("#img3").fadeIn();
+					});
+					$("#img4").fadeOut(function(){
+						$("#img4").attr("src",slide[8*key-5]);
+						$("#img4").fadeIn();
+					});
+					$("#img5").fadeOut(function(){
+						$("#img5").attr("src",slide[8*key-4]);
+						$("#img5").fadeIn();
+					});
+					$("#img6").fadeOut(function(){
+						$("#img6").attr("src",slide[8*key-3]);
+						$("#img6").fadeIn();
+					});
+					$("#img7").fadeOut(function(){
+						$("#img7").attr("src",slide[8*key-2]);
+						$("#img7").fadeIn();
+					});
+					$("#img8").fadeOut(function(){
+						$("#img8").attr("src",slide[8*key-1]);
+						$("#img8").fadeIn();
+					});
+					key++;
+					if (key == 4){
+						key =1;
+					}
+				});
+				// ----------------------
+				var key2 = 2;
+				$(".prev").click(function(){
+					if (key2 == 1){
+						key2 =4;
+					}
+					$("#img1").fadeOut(function(){
+						$("#img1").attr("src",slide[8*key2-8]);
+						$("#img1").fadeIn();
+					});
+					$("#img2").fadeOut(function(){
+						$("#img2").attr("src",slide[8*key2-7]);
+						$("#img2").fadeIn();
+					});
+					$("#img3").fadeOut(function(){
+						$("#img3").attr("src",slide[8*key2-6]);
+						$("#img3").fadeIn();
+					});
+					$("#img4").fadeOut(function(){
+						$("#img4").attr("src",slide[8*key2-5]);
+						$("#img4").fadeIn();
+					});
+					$("#img5").fadeOut(function(){
+						$("#img5").attr("src",slide[8*key2-4]);
+						$("#img5").fadeIn();
+					});
+					$("#img6").fadeOut(function(){
+						$("#img6").attr("src",slide[8*key2-3]);
+						$("#img6").fadeIn();
+					});
+					$("#img7").fadeOut(function(){
+						$("#img7").attr("src",slide[8*key2-2]);
+						$("#img7").fadeIn();
+					});
+					$("#img8").fadeOut(function(){
+						$("#img8").attr("src",slide[8*key2-1]);
+						$("#img8").fadeIn();
+					});
+					key2--;
+				});
+
+			});
+				
+				
+		</script>
+
+		<!-- /slide -->
+		<!-- main -->
+		<div class="main">
+			<!-- left -->
+			<div class="left">
+				<!-- category -->
+				<div class="category">
+					<div class="category-top"><p>DANH MỤC SÁCH</p></div>
+					<div class="category-line"></div>
+					<div class="category-main">
+						<ul>
+							<li><a href="#">Triết học</a></li>
+							<li><a href="#">Kinh tế</a></li>
+							<li><a href="#">Luật</a></li>
+							<li><a href="#">Tâm lý</a></li>
+							<li><a href="#">Xã hội học</a></li>
+							<li><a href="#">Gia đình và Giới</a></li>
+							<li><a href="#">Văn học</a></li>
+							<li><a href="#">Ngôn ngữ</a></li>
+							<li><a href="#">Hán Nôm</a></li>
+							<li><a href="#">Lịch sử</a></li>
+							<li><a href="#">Dân tộc học</a></li>
+							<li><a href="#">Khảo cổ</a></li>
+							<li><a href="#">Văn hóa</a></li>
+							<li><a href="#">Tôn giáo</a></li>
+							<li><a href="#">Từ điển</a></li>
+							<li><a href="#">Nghiên cứu quốc tế</a></li>
+						</ul>
+					</div>	
+				</div>
+				<!-- /category -->
+				<!-- search-box -->
+				<div class="search-box">
+					<div class="category-top"><p>TÌM KIẾM SÁCH</p></div>
+					<div class="category-line"></div>
+					<div class="search-box-main">
+						<div class="txt-tenSach"><input type="text" placeholder="Nhập tên sách..."></div>
+						<div class="txt-danhMuc"><input type="text" placeholder="Chọn danh mục sách"></div>
+						<div class="txt-tenTG"><input type="text" placeholder="Tên tác giả"></div>
+						<div class="txt-maSach"><input type="text" placeholder="Mã sách"></div>
+						<input type="button" value="Tìm kiếm" id="btn-TimKiem">
+					</div>
+				</div>
+				<!-- /search-box -->
+				<!-- linkWeb -->
+				<div class="link-web">
+					<div class="category-top"><p>Liên kết website</p></div>
+					<div class="category-line"></div>
+					<div class="link-web-main">
+						<div class="link-web-body">
+							<input type="text" placeholder="Lựa chọn website">
+						</div>
+					</div>
+				</div>
+				<!-- /linkWeb -->
+				<div class="ads">
+					<img src="images/ads1.jpg"><br/>
+					<img src="images/ads2.jpg">
+				</div>
+			</div>
+			<!-- /left -->
+			<!-- mid -->
+			<div class="mid">
+				<div class="mid-top"></div>
+				<div class="mid-body">
+					<div class="mid-line-top"></div>
+					<div class="mid-main">
+						<div class="mid-main-img">
+							<a href="#"><img src="images/1.jpg"></a>
+						</div>
+						<div class="mid-main-text">
+							<div class="title-book"><a href="#">Một số vấn đề lý luận ngôn ngữ học và tiếng Việt</a></div>
+							<div class="author">Tác giả:<p>Nhà xuất bản KHXH<p> </div> 
+							<div class="prices">Giá sách:<p>520.000.000</p>triệu</div>
+							<div class="description">ĐTTS ghi: Viện Khoa học xã hội Việt Nam. Viện Từ điển học và Bách khoa thư Việt Nam. Từ khóa: 1. Tiếng Việt  2. Ngôn ngữ học  3. Tác phẩm  4. Tác giả  5. Từ điển học  </div>
+						</div>
+						<div class="select-book"><a href="#"><p>MUA SÁCH NÀY</p></a></div>
+					</div>
+					<div class="mid-main">
+						<div class="mid-main-img">
+							<a href="#"><img src="images/2.jpg"></a>
+						</div>
+						<div class="mid-main-text">
+							<div class="title-book"><a href="#">Tri thức địa phương của người dân sống trong vườn quốc gia và khu bảo tồn thiên nhiên </a></div>
+							<div class="author">Tác giả:<p>Nhà xuất bản KHXH<p> </div> 
+							<div class="prices">Giá sách:<p>520.000.000</p>triệu</div>
+							<div class="description">Tri thức địa phương của người dân sống trong vườn quốc gia và khu bảo tồn thiên nhiên / Nguyễn Ngọc Thanh (ch.b.), Lê Thị Dương, Lê Hải Đăng...</div>
+						</div>
+						<div class="select-book"><a href="#"><p>MUA SÁCH NÀY</p></a></div>
+					</div>
+					<div class="mid-main">
+						<div class="mid-main-img">
+							<a href="#"><img src="images/3.jpg"></a>
+						</div>
+						<div class="mid-main-text">
+							<div class="title-book"><a href="#">Social Responsibility in the context of Market Economy </a></div>
+							<div class="author">Tác giả:<p>Nhà xuất bản KHXH<p> </div> 
+							<div class="prices">Giá sách:<p>520.000.000</p>triệu</div>
+							<div class="description">Social Responsibility in the context of Market Economy/Pham Van Duc (Editor). - H. : Khoa học xã hội, 2012</div>
+						</div>
+						<div class="select-book"><a href="#"><p>MUA SÁCH NÀY</p></a></div>
+					</div>
+					<div class="mid-main">
+						<div class="mid-main-img">
+							<a href="#"><img src="images/4.jpg"></a>
+						</div>
+						<div class="mid-main-text">
+							<div class="title-book"><a href="#">Một số vấn đề lý luận ngôn ngữ học và tiếng Việt</a></div>
+							<div class="author">Tác giả:<p>Nhà xuất bản KHXH<p> </div> 
+							<div class="prices">Giá sách:<p>520.000.000</p>triệu</div>
+							<div class="description">ĐTTS ghi: Viện Khoa học xã hội Việt Nam. Viện Từ điển học và Bách khoa thư Việt Nam. Từ khóa: 1. Tiếng Việt  2. Ngôn ngữ học  3. Tác phẩm  4. Tác giả  5. Từ điển học  </div>
+						</div>
+						<div class="select-book"><a href="#"><p>MUA SÁCH NÀY</p></a></div>
+					</div>
+					<div class="mid-main">
+						<div class="mid-main-img">
+							<a href="#"><img src="images/5.jpg"></a>
+						</div>
+						<div class="mid-main-text">
+							<div class="title-book"><a href="#">Một số vấn đề lý luận ngôn ngữ học và tiếng Việt </a></div>
+							<div class="author">Tác giả:<p>Nhà xuất bản KHXH<p> </div> 
+							<div class="prices">Giá sách:<p>520.000.000</p>triệu</div>
+							<div class="description">ĐTTS ghi: Viện Khoa học xã hội Việt Nam. Viện Từ điển học và Bách khoa thư Việt Nam. Từ khóa: 1. Tiếng Việt  2. Ngôn ngữ học  3. Tác phẩm  4. Tác giả  5. Từ điển học  </div>
+						</div>
+						<div class="select-book"><a href="#"><p>MUA SÁCH NÀY</p></a></div>
+					</div>
+					<div class="mid-main">
+						<div class="mid-main-img">
+							<a href="#"><img src="images/6.jpg"></a>
+						</div>
+						<div class="mid-main-text">
+							<div class="title-book"><a href="#">Một số vấn đề lý luận ngôn ngữ học và tiếng Việt</a></div>
+							<div class="author">Tác giả:<p>Nhà xuất bản KHXH<p> </div> 
+							<div class="prices">Giá sách:<p>520.000.000</p>triệu</div>
+							<div class="description">ĐTTS ghi: Viện Khoa học xã hội Việt Nam. Viện Từ điển học và Bách khoa thư Việt Nam. Từ khóa: 1. Tiếng Việt  2. Ngôn ngữ học  3. Tác phẩm  4. Tác giả  5. Từ điển học  </div>
+						</div>
+						<div class="select-book"><a href="#"><p>MUA SÁCH NÀY</p></a></div>
+					</div>
+					<div class="mid-line-bottom"></div>
+					<div class="mid-next">
+						<div class="mid-next-box">1</div>
+						<div class="mid-next-box">2</div>
+						<div class="mid-next-box">3</div>
+						<div class="mid-next-box">4</div>
+						<div class="mid-next-box">5</div>
+						<div class="mid-next-box">6</div>
+						<div class="mid-next-box">7</div>
+						<div class="mid-next-box">...</div>
+					</div>
+				</div>
+			</div>
+			<!-- /mid -->
+			<div class="right">
+				<div class="sup-live">
+					<div class="category-top"><p>Hỗ trợ trực tuyến</p></div>
+					<div class="sup-lice-body">
+						<div class="right-line"></div>
+						<div class="sup-live-main">
+							<img src="images/sup-live1.jpg">
+							<a href="#">1900 00000</a>
+						</div>
+						<div class="sup-live-main">
+							<img src="images/sup-live2.jpg">
+							<a href="#">Email nhà xuất bản KHXH</a>
+						</div>
+						<div class="sup-live-main">
+							<img src="images/sup-live3.jpg">
+							<a href="#">Nhà xuất bản KHXH</a>
+						</div>
+						<div class="sup-live-main">
+							<img src="images/sup-live4.jpg">
+							<a href="#">Nhà xuất bản KHXH</a>
+						</div>
+					</div>
+				</div>
+				<!--  -->
+				<div class="news">
+					<div class="category-top"><p>Tin tức</p></div>
+					<div class="news-body">
+						<div class="right-line"></div>
+						<div class="news-main">
+							<img src="images/new-main2.jpg">
+							<a href="#"> Nhà sách Trí Tuệ sắp phát hành cuốn "Tuyển tập thơ, đồng dao, câu đố dành cho thiếu nhi"</a>
+						</div>
+						<div class="news-main">
+							<img src="images/new-main1.jpg">
+							<a href="#"> Nhà sách Trí Tuệ sắp phát hành cuốn "Tuyển tập thơ, đồng dao, câu đố dành cho thiếu nhi"</a>
+						</div>
+						<div class="news-main">
+							<img src="images/new-main3.jpg">
+							<a href="#"> Nhà sách Trí Tuệ sắp phát hành cuốn "Tuyển tập thơ, đồng dao, câu đố dành cho thiếu nhi"</a>
+						</div>
+					</div>
+				</div>
+				<!--  -->
+				<div class="new-book">
+					<div class="category-top"><p>Sách sắp xuất bản</p></div>
+					<div class="new-book-body">
+						<div class="right-line"></div>
+						<div class="new-book-main">
+							<img src="images/10.jpg">
+							<div class="new-book-text">
+								<div class="new-book-title"><a href="#">Lịch sử Đông Nam Á / Trần Khánh (ch.b.), Hoàng Anh Tuấn, Nguyễn Văn Kim... </a></div>
+								<div class="new-book-author">Tác giả:<p>Nhà xuất bản<p> </div> 
+								<div class="new-book-prices">Giá:<p>520.000.000 triệu</p></div>
+							</div>
+							<div class="new-book-select"><a href="#"> Mua sách này</a></div>
+						</div>
+						<div class="new-book-main">
+							<img src="images/12.jpg">
+							<div class="new-book-text">
+								<div class="new-book-title"><a href="#">Lịch sử Đông Nam Á / Trần Khánh (ch.b.), Hoàng Anh Tuấn, Nguyễn Văn Kim... </a></div>
+								<div class="new-book-author">Tác giả:<p>Nhà xuất bản<p> </div> 
+								<div class="new-book-prices">Giá:<p>520.000.000 triệu</p></div>
+							</div>
+							<div class="new-book-select"><a href="#"> Mua sách này</a></div>
+						</div>
+						<div class="new-book-main">
+							<img src="images/13.jpg">
+							<div class="new-book-text">
+								<div class="new-book-title"><a href="#">Lịch sử Đông Nam Á / Trần Khánh (ch.b.), Hoàng Anh Tuấn, Nguyễn Văn Kim... </a></div>
+								<div class="new-book-author">Tác giả:<p>Nhà xuất bản<p> </div> 
+								<div class="new-book-prices">Giá:<p>520.000.000 triệu</p></div>
+							</div>
+							<div class="new-book-select"><a href="#"> Mua sách này</a></div>
+						</div>
+						<div class="new-book-main">
+							<img src="images/14.jpg">
+							<div class="new-book-text">
+								<div class="new-book-title"><a href="#">Lịch sử Đông Nam Á / Trần Khánh (ch.b.), Hoàng Anh Tuấn, Nguyễn Văn Kim... </a></div>
+								<div class="new-book-author">Tác giả:<p>Nhà xuất bản<p> </div> 
+								<div class="new-book-prices">Giá:<p>520.000.000 triệu</p></div>
+							</div>
+							<div class="new-book-select"><a href="#"> Mua sách này</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /main -->
+		<!-- footer -->
+		<div class="line1"></div>
+		<div class="footer">
+			<div class="footer-main">
+				<div class="account">
+					<div class="text">QUẢN LÝ TÀI KHOẢN</div>
+					<ul>
+						<li><a href="#">Tạo tài khoản</a></li>
+						<li><a href="#">Đăng nhập</a></li>
+						<li><a href="#">Thay đổi thông tin tài khoản</a></li>
+						<li><a href="#">Quên mật khẩu</a></li>
+						<li><a href="#">Lịch sử mua hàng</a></li>
+					</ul>
+				</div>
+				<div class="help">
+					<div class="text">TRỢ GIÚP</div>
+					<ul>
+						<li><a href="#">Quy định sử dụng</a></li>
+						<li><a href="#">Hướng dẫn mua hàng</a></li>
+						<li><a href="#">Phương thức thanh toán</a></li>
+						<li><a href="#">Phương thức vận chuyển</a></li>
+						<li><a href="#">Các câu hỏi thường gặp F.A.Q</a></li>
+					</ul>
+				</div>
+				<div class="introduct">
+					<div class="text">GIỚI THIỆU NHÀ XUẤT BẢN</div>
+					<ul>
+						<li><a href="#">Giới thiệu nahf xuất bản</a></li>
+						<li><a href="#">Liên hệ</a></li>
+						<li><a href="#">Góc báo chí</a></li>
+						<li><a href="#">Sơ đồ Website</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom2">
+				<div class="footer-text">NHÀ XUẤT BẢN KHOA HỌC XÃ HỘI</div>
+				<div class="footer-line"></div>
+				<div class="footer-bottom">
+					<div class="footer-bottom1">
+						Social Sciences Publishing House<br/>
+						36 Hàng Chuối - Hai Bà Trưng - Hà Nội  <br/>
+						Tel: 04.39719073 - Fax: 04.39719071 - Email: nxbkhxh@gmail.com
+					</div>
+					<div class="footer-bottom2">
+						<p>CHI NHÁNH NHÀ XUẤt BẢN KHOA HỌC XÃ HỘI<br/>
+						57 Sương Nguyệt Ánh  - Phường Bến Thành - Quận I - TP Hồ Chí Minh<br/>
+						Tel: 08.38394948 - Fax: 08.38394948</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /footer -->
+	</div>
+</body>
+</html>
